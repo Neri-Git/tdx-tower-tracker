@@ -35,7 +35,7 @@
     "id": 5,
     "name": "Sniper",
     "category": "Gold",
-    "cost": "Lvl 15 \u2022 1,650 Gold (150 R$)",
+    "cost": "Lvl 15 • 1,650 Gold (150 R$)",
     "status": "In Progress",
     "code": "Sniper = {\n    [0] = {\n        HP = 100,\n        Range = 21,\n        Damage = 8,\n        Cooldown = 2.75,\n        Pierce = 1,\n        Flying = true\n    },\n    [\"Path1Level1\"] = {\n        HP = 10,                -- 100 -> 110 (+10)\n        Range = 4,              -- 21 -> 25 (+4)\n        Damage = 0,\n        Cooldown = -0.75        -- 2.75 -> 2.0 (-0.75)\n    },\n    [\"Path1Level2\"] = {\n        HP = 15,                -- 110 -> 125 (+15)\n        Range = 6,              -- 25 -> 31 (+6)\n        Damage = 0,\n        Cooldown = 0,\n        Stealth = true\n    },\n    [\"Path1Level3\"] = {\n        HP = 50,                -- 125 -> 175 (+50)\n        Range = 2,              -- 31 -> 33 (+2)\n        Damage = 21,            -- 8 -> 29 (+21)\n        Cooldown = -0.2,        -- 2.0 -> 1.8 (-0.2)\n        Pierce = 1              -- hits +1 additional zombie (total 2)\n    },\n    [\"Path1Level4\"] = {\n        HP = 170,               -- 175 -> 345 (+170)\n        Range = 3,              -- 33 -> 36 (+3)\n        Damage = 35,            -- 29 -> 64 (+35)\n        Cooldown = 0.3,         -- 1.8 -> 2.1 (+0.3)\n        IgnoreBulletResistance = true,\n        Hidden = true,\n        RegainHiddenTime = 7    -- base regain time of 7s\n    },\n    [\"Path1Level5\"] = {\n        HP = 700,               -- 345 -> 1045 (+700)\n        Range = 3,              -- 36 -> 39 (+3)\n        Damage = 150,           -- 64 -> 214 (+150)\n        Cooldown = 0.6,         -- 2.1 -> 2.7 (+0.6)\n        Pierce = 1,             -- hits +1 additional zombie (total 3 / stat 2)\n        RegainHiddenTime = -3   -- 7s -> 4s (-3s delta)\n    },\n    [\"Path2Level1\"] = {\n        HP = 15,                -- 100 -> 115 (+15)\n        Range = 0,\n        Damage = 4,             -- 8 -> 12 (+4)\n        Cooldown = 0\n    },\n    [\"Path2Level2\"] = {\n        HP = 20,                -- 115 -> 135 (+20)\n        Range = 0,\n        Damage = 12,            -- 12 -> 24 (+12)\n        Cooldown = 0\n    },\n    [\"Path2Level3\"] = {\n        HP = 80,                -- 135 -> 215 (+80)\n        Range = 2,              -- 21 -> 23 (+2)\n        Damage = 5,             -- 24 -> 29 (+5)\n        Cooldown = -1           -- 2.75 -> 1.75 (-1.0)\n    },\n    [\"Path2Level4\"] = {\n        HP = 185,               -- 215 -> 400 (+185)\n        Range = 18,             -- 23 -> 41 (+18)\n        Damage = 18,            -- 29 -> 47 (+18)\n        Cooldown = 0,\n        Ability = \"Flare Gun\"\n    },\n    [\"Path2Level5\"] = {\n        HP = 625,               -- 400 -> 1025 (+625)\n        Range = 22,             -- 41 -> 63 (+22)\n        Damage = 120,           -- 47 -> 167 (+120)\n        Cooldown = 0.25,        -- 1.75 -> 2.0 (+0.25)\n        Pierce = 1,\n        DamageType = \"laser\"\n    }\n}"
   },
@@ -44,8 +44,9 @@
     "name": "Cryo Blaster",
     "category": "Gold",
     "cost": "2,000 Gold",
-    "status": "Not Complete",
-    "code": ""
+    "status": "Complete",
+    "code": "CryoBlaster = {\n    [0] = {\n        Price = 225,\n        Range = 7,\n        Damage = 0,\n        FreezeAmount = 0.5,\n        ThawTime = 1.2,\n        Cooldown = 0.2,\n        SplashRadius = 1,\n        MaxTargets = 3,\n        DamageType = \"Freeze\"\n    },\n    [\"Path1Level1\"] = {\n        Price = 225,\n        Range = 0,\n        Damage = 0,\n        Cooldown = 0,\n        SlowAmount = 0.25\n    },\n    [\"Path1Level2\"] = {\n        Price = 250,\n        Range = 2.5,\n        Damage = 0,\n        Cooldown = 0\n    },\n    [\"Path1Level3\"] = {\n        Price = 1000,\n        Range = 0,\n        Damage = 0.5,\n        Cooldown = 0,\n        FreezeAmount = 2.0,\n        MaxTargets = 2\n    },\n    [\"Path1Level4\"] = {\n        Price = 2750,\n        Range = 0,\n        Damage = 0,\n        Cooldown = 0,\n        FreezeAmount = 2.0,\n        SplashRadius = 1.0,\n        MaxTargets = 2,\n        ExtraFrozenDamage = 40\n    },\n    [\"Path1Level5\"] = {\n        Price = 7500,\n        Range = 0,\n        Damage = 2.0,\n        Cooldown = 0,\n        FreezeAmount = 7.0,\n        SplashRadius = 0.5,\n        MaxTargets = 5,\n        ExtraFrozenDamage = 15,\n        IgnoreIceResistance = true\n    },\n    [\"Path2Level1\"] = {\n        Price = 450,\n        Range = 0,\n        Damage = 0.5,\n        Cooldown = 0,\n        FreezeAmount = 1.5,\n        ExtraFrozenDamage = 25\n    },\n    [\"Path2Level2\"] = {\n        Price = 475,\n        Range = 3.0,\n        Damage = 0,\n        Cooldown = 0,\n        MaxTargets = 2\n    },\n    [\"Path2Level3\"] = {\n        Price = 2100,\n        Range = 4.5,\n        Damage = 19.5,\n        Cooldown = 1.8,\n        FreezeAmount = 38.0,\n        ThawTime = 1.0,\n        SplashRadius = -1.0,\n        MaxTargets = -4,\n        ExtraFrozenDamage = 5\n    },\n    [\"Path2Level4\"] = {\n        Price = 5675,\n        Range = 2.0,\n        Damage = 30.0,\n        Cooldown = -0.25,\n        FreezeAmount = 45.0\n    },\n    [\"Path2Level5\"] = {\n        Price = 14000,\n        Range = 1.0,\n        Damage = 50.0,\n        Cooldown = -0.5,\n        FreezeAmount = 130.0,\n        ThawTime = 2.0,\n        ExtraFrozenDamage = 25,\n        Stealth = true,\n        Flying = true,\n        FreezeBosses = true\n    }\n}",
+    "hp": "50\ntop\n25\n35\n75\n250\n550\nbot\n15\n35\n150\n275\n1250"
   },
   {
     "id": 7,
@@ -123,7 +124,7 @@
     "id": 16,
     "name": "Laser Gunner",
     "category": "Gold",
-    "cost": "Lvl 20 \u2022 5,500 Gold (400 R$)",
+    "cost": "Lvl 20 • 5,500 Gold (400 R$)",
     "status": "In Progress",
     "code": "ShockRounds = {\n    Name = \"Shock Rounds\",\n    Cooldown = 30,\n    Duration = 12,\n    DamageBuff = 0.50,\n    StunDuration = 0.3\n}\n\nStealthSensor = {\n    [1] = {\n        Name = \"Stealth Sensor\",\n        Cooldown = 12,\n        Damage = 75,\n        RevealStealth = true\n    },\n    [2] = {\n        Name = \"Stealth Sensor 2\",\n        Cooldown = 10,\n        Damage = 175,\n        RevealStealth = true\n    },\n    [3] = {\n        Name = \"Stealth Sensor 3\",\n        Cooldown = 8,\n        Damage = 500,\n        RevealStealth = true\n    }\n}\n\nLaserGunner = {\n    [0] = {\n        Price = 925,\n        HP = 250,\n        Range = 14,\n        Damage = 4,\n        Cooldown = 0.7,\n        DamageType = \"Laser\"\n    },\n    [\"Path1Level1\"] = {\n        Price = 475,\n        HP = 25,                        -- 250 -> 275 (+25)\n        Range = 1,                      -- 14 -> 15 (+1)\n        Damage = 2,                     -- 4 -> 6 (+2)\n        Cooldown = 0\n    },\n    [\"Path1Level2\"] = {\n        Price = 1050,\n        HP = 50,                        -- 275 -> 325 (+50)\n        Range = 0,\n        Damage = 8,                     -- 6 -> 14 (+8)\n        Cooldown = 0\n    },\n    [\"Path1Level3\"] = {\n        Price = 4200,\n        HP = 150,                       -- 325 -> 475 (+150)\n        Range = 2,                      -- 15 -> 17 (+2)\n        Damage = 8,                     -- 14 -> 22 (+8)\n        Cooldown = 0,\n        Pierce = 1                      -- laser beam pierces +1 enemy (hits 2)\n    },\n    [\"Path1Level4\"] = {\n        Price = 6500,\n        HP = 275,                       -- 475 -> 750 (+275)\n        Range = 3,                      -- 17 -> 20 (+3)\n        Damage = 13,                    -- 22 -> 35 (+13)\n        Cooldown = -0.10,               -- 0.70 -> 0.60 (-0.10)\n        Ability = \"Shock Rounds\"\n    },\n    [\"Path1Level5\"] = {\n        Price = 28750,\n        HP = 1500,                      -- 750 -> 2250 (+1500)\n        Range = 1,                      -- 20 -> 21 (+1)\n        Damage = -15,                   -- 35 -> 20 (-15)\n        Cooldown = -0.40,               -- 0.60 -> 0.20 (-0.40, laser minigun)\n        Pierce = 1                      -- 1 -> 2 (+1 additional pierce, hits 3)\n    },\n    [\"Path2Level1\"] = {\n        Price = 150,\n        HP = 15,                        -- 250 -> 265 (+15)\n        Range = 5,                      -- 14 -> 19 (+5)\n        Damage = 0,\n        Cooldown = 0\n    },\n    [\"Path2Level2\"] = {\n        Price = 400,\n        HP = 25,                        -- 265 -> 290 (+25)\n        Range = 0,\n        Damage = 2,                     -- 4 -> 6 (+2)\n        Cooldown = -0.10,               -- 0.70 -> 0.60 (-0.10)\n        Air = true\n    },\n    [\"Path2Level3\"] = {\n        Price = 3275,\n        HP = 250,                       -- 290 -> 540 (+250)\n        Range = -1,                     -- 19 -> 18 (-1)\n        Damage = 1,                     -- 6 -> 7 (+1, switches to Laser SMG)\n        Cooldown = -0.27,               -- 0.60 -> 0.33 (-0.27)\n        Ability = \"Stealth Sensor\"\n    },\n    [\"Path2Level4\"] = {\n        Price = 7000,\n        HP = 300,                       -- 540 -> 840 (+300)\n        Range = 0,\n        Damage = 3,                     -- 7 -> 10 (+3)\n        Cooldown = -0.15,               -- 0.33 -> 0.18 (-0.15)\n        Ability = \"Stealth Sensor 2\"\n    },\n    [\"Path2Level5\"] = {\n        Price = 16350,\n        HP = 1000,                      -- 840 -> 1840 (+1000)\n        Range = 0,\n        Damage = 4,                     -- 10 -> 14 (+4)\n        Cooldown = -0.08,               -- 0.18 -> 0.10 (-0.08, Dual SMGs)\n        Ability = \"Stealth Sensor 3\"\n    }\n}"
   },
@@ -147,7 +148,7 @@
     "id": 19,
     "name": "Artillery",
     "category": "Gold",
-    "cost": "Lvl 30 \u2022 8,750 Gold (800 R$)",
+    "cost": "Lvl 30 • 8,750 Gold (800 R$)",
     "status": "In Progress",
     "code": "Artillery = {\n    [0] = {\n        Price = 1850,\n        HP = 400,\n        Range = 65,\n        Damage = 65,\n        Cooldown = 11,\n        SplashRadius = 4,\n        DamageType = \"Explosion\"\n    },\n    [\"Path1Level1\"] = {\n        Price = 550,\n        HP = 30,                        -- 400 -> 430 (+30)\n        Range = 0,\n        Damage = 0,\n        Cooldown = -2                   -- 11.0 -> 9.0 (-2.0)\n    },\n    [\"Path1Level2\"] = {\n        Price = 1000,\n        HP = 175,                       -- 430 -> 605 (+175)\n        Range = 10,                     -- 65 -> 75 (+10)\n        Damage = 0,\n        Cooldown = -1,                   -- 9.0 -> 8.0 (-1.0)\n        SplashRadius = 1                -- 4 -> 5 (+1)\n    },\n    [\"Path1Level3\"] = {\n        Price = 2000,\n        HP = 80,                        -- 605 -> 685 (+80)\n        Range = 0,\n        Damage = 0,\n        Cooldown = -2                   -- 8.0 -> 6.0 (-2.0)\n    },\n    [\"Path1Level4\"] = {\n        Price = 6500,\n        HP = 50,                        -- 685 -> 735 (+50)\n        Range = 0,\n        Damage = 100,                    -- 65 -> 165 (+100)\n        Cooldown = 0\n    },\n    [\"Path1Level5\"] = {\n        Price = 18500,\n        HP = 1000,                      -- 735 -> 1735 (+1000)\n        Range = 0,\n        Damage = 25,                     -- 165 -> 190 (+25)\n        Cooldown = -5.7,                 -- burst interval: 6.0 -> 0.3 (-5.70)\n        Burst = 3,                       -- 3-shell burst\n        BurstCooldown = 6.5,             -- reload delay after burst: 6.5s\n        AutomaticAim = true\n    },\n    [\"Path2Level1\"] = {\n        Price = 1200,\n        HP = 25,                        -- 400 -> 425 (+25)\n        Range = 0,\n        Damage = 25,                     -- 65 -> 90 (+25)\n        Cooldown = 0,\n        SplashRadius = 1                -- 4 -> 5 (+1)\n    },\n    [\"Path2Level2\"] = {\n        Price = 3000,\n        HP = 35,                        -- 425 -> 460 (+35)\n        Range = 0,\n        Damage = 60,                     -- 90 -> 150 (+60)\n        Cooldown = 0\n    },\n    [\"Path2Level3\"] = {\n        Price = 10250,\n        HP = 1000,                      -- 460 -> 1460 (+1000)\n        Range = 30,                     -- 65 -> 95 (+30)\n        Damage = 125,                    -- 150 -> 275 (+125)\n        Cooldown = 0,\n        SplashRadius = 4                -- 5 -> 9 (+4)\n    },\n    [\"Path2Level4\"] = {\n        Price = 12000,\n        HP = 100,                       -- 1460 -> 1560 (+100)\n        Range = 30,                     -- 95 -> 125 (+30)\n        Damage = 260,                    -- 275 -> 535 (+260)\n        Cooldown = 0\n    },\n    [\"Path2Level5\"] = {\n        Price = 100000,\n        HP = 7000,                      -- 1560 -> 8560 (+7000)\n        Range = 70,                     -- 125 -> 195 (+70)\n        Damage = 2400,                   -- 535 -> 2935 (+2400)\n        Cooldown = 2,                    -- 11.0 -> 13.0 (+2.0)\n        SplashRadius = 4,                -- 9 -> 13 (+4)\n        Stealth = true,\n        StunImmune = true,\n        AutomaticAim = true\n    }\n}"
   },
@@ -156,54 +157,60 @@
     "name": "Scout Helicopter",
     "category": "Gold",
     "cost": "9,000 Gold (550 R$)",
-    "status": "Not Complete",
-    "code": ""
+    "status": "Complete",
+    "code": "ScoutHelicopter = {\n    [0] = {\n        Price = 2150,\n        Range = 8,\n        Damage = 2.0,\n        Cooldown = 0.15,\n        MovementSpeed = 9.0,\n        DamageType = \"Bullet\",\n        Flying = true,\n        Abilities = {\n            SetLocation = {\n                Cooldown = 5\n            },\n            FollowPlayer = {\n                Cooldown = 5\n            }\n        }\n    },\n    [1] = {\n        Price = 2200,\n        Range = 0,\n        Damage = 0.5,\n        Cooldown = 0,\n        Stealth = true,\n        Passive = {\n            Name = \"Passive Stealth Reveal\"\n        }\n    },\n    [2] = {\n        Price = 2900,\n        Range = 0,\n        Damage = 1.0,\n        Cooldown = 0,\n        Passive = {\n            Name = \"Rocket Pods\",\n            Damage = 25,\n            SplashRadius = 2.0,\n            Cooldown = 4.5\n        }\n    },\n    [3] = {\n        Price = 4750,\n        Range = 0,\n        Damage = 2.0,\n        Cooldown = -0.02,\n        MovementSpeed = 4.0,\n        Passive = {\n            Name = \"Rocket Pods\",\n            Damage = 45,\n            SplashRadius = 2.0,\n            Cooldown = 3.5\n        }\n    },\n    [4] = {\n        Price = 6500,\n        Range = 15.0,\n        Damage = 0,\n        Cooldown = 0,\n        Passive = {\n            Name = \"Rocket Pods\",\n            Damage = 120,\n            SplashRadius = 2.0,\n            Cooldown = 2.75\n        }\n    },\n    [5] = {\n        Price = 24000,\n        Range = 7.0,\n        Damage = 20.0,\n        Cooldown = 0,\n        MovementSpeed = 7.0,\n        Passive = {\n            Name = \"Bomb\",\n            Damage = 1000,\n            Cooldown = 5.0\n        }\n    }\n}",
+    "hp": "600\ntop\n100\n100\n600\n2800\n4000\nbot\n100\n100\n600\n2800\n4000"
   },
   {
     "id": 21,
     "name": "Jet Trooper",
     "category": "Gold",
-    "cost": "Lvl 25 \u2022 9,500 Gold (450 R$)",
-    "status": "Not Complete",
-    "code": ""
+    "cost": "Lvl 25 • 9,500 Gold (450 R$)",
+    "status": "Complete",
+    "code": "JetTrooper = {\n    [0] = {\n        Price = 1175,\n        Range = 11,\n        Damage = 3.5,\n        Cooldown = 2.55,\n        Burst = 10,\n        BurstCooldown = 0.1,\n        MovementSpeed = 9.0,\n        DamageType = \"Bullet\",\n        Flying = true,\n        Passive = {\n            Name = \"Explode On Death\"\n        },\n        Abilities = {\n            SetLocation = {\n                Cooldown = 3\n            }\n        }\n    },\n    [\"Path1Level1\"] = {\n        Price = 225,\n        Range = 0,\n        Damage = 0,\n        Cooldown = -0.35\n    },\n    [\"Path1Level2\"] = {\n        Price = 700,\n        Range = 0,\n        Damage = 0,\n        Cooldown = 0,\n        MovementSpeed = 6.0\n    },\n    [\"Path1Level3\"] = {\n        Price = 2000,\n        Range = 2.0,\n        Damage = 4.0,\n        Cooldown = -0.25,\n        Stealth = true\n    },\n    [\"Path1Level4\"] = {\n        Price = 5250,\n        Range = 0,\n        Damage = 8.0,\n        Cooldown = -0.20\n    },\n    [\"Path1Level5\"] = {\n        Price = 7800,\n        Range = 4.5,\n        Damage = 12.0,\n        Cooldown = -0.75,\n        MovementSpeed = 20.0,\n        IgnoreBulletResistance = true\n    },\n    [\"Path2Level1\"] = {\n        Price = 250,\n        Range = 3.5,\n        Damage = 0,\n        Cooldown = 0\n    },\n    [\"Path2Level2\"] = {\n        Price = 1000,\n        Range = 0,\n        Damage = 3.0,\n        Cooldown = 0,\n        StunImmunity = true\n    },\n    [\"Path2Level3\"] = {\n        Price = 4850,\n        Range = 0,\n        Damage = 2.0,\n        Cooldown = -1.20,\n        Burst = 2,\n        BurstCooldown = -0.0375,\n        SplashRadius = 0.5,\n        DamageType = \"Explosive\",\n        Ability = {\n            Name = \"Fire Rounds Lvl 1\",\n            Cooldown = 20,\n            Duration = 7,\n            BurnDamage = 12\n        }\n    },\n    [\"Path2Level4\"] = {\n        Price = 15000,\n        Range = 0,\n        Damage = 11.0,\n        Cooldown = 0,\n        MovementSpeed = 1.0,\n        Ability = {\n            Name = \"Fire Rounds Lvl 2\",\n            Cooldown = 22,\n            Duration = 9,\n            BurnDamage = 25\n        }\n    },\n    [\"Path2Level5\"] = {\n        Price = 31750,\n        Range = 0,\n        Damage = 18.0,\n        Cooldown = -0.20,\n        SplashRadius = 0.5,\n        Ability = {\n            Name = \"Fire Rounds Lvl 3\",\n            Cooldown = 24,\n            Duration = 12,\n            BurnDamage = 75\n        }\n    }\n}",
+    "hp": "400\ntop\n20\n25\n250\n350\n700\nbot\n20\n100\n1000\n350\n1200"
   },
   {
     "id": 22,
     "name": "AA Turret",
     "category": "Gold",
     "cost": "11,000 Gold (275 R$)",
-    "status": "Not Complete",
-    "code": ""
+    "status": "Complete",
+    "code": "AATurret = {\n    [0] = {\n        Price = 450,\n        Range = 28,\n        Damage = 80,\n        Cooldown = 6.0,\n        Burst = 1,\n        BurstCooldown = 0,\n        SplashRadius = 1,\n        MinRange = 0,\n        DamageType = \"Explosive\",\n        Flying = true\n    },\n    [\"Path1Level1\"] = {\n        Price = 300,\n        Range = 2.0,\n        Damage = 0,\n        Cooldown = 0,\n        Burst = 1,\n        BurstCooldown = 0.25\n    },\n    [\"Path1Level2\"] = {\n        Price = 400,\n        Range = 6.0,\n        Damage = 0,\n        Cooldown = 0,\n        Burst = 1\n    },\n    [\"Path1Level3\"] = {\n        Price = 2400,\n        Range = 5.0,\n        Damage = 25,\n        Cooldown = 0,\n        Burst = 1,\n        BurstCooldown = 0.10,\n        MinRange = 7.0\n    },\n    [\"Path1Level4\"] = {\n        Price = 7500,\n        Range = 30.0,\n        Damage = 100,\n        Cooldown = 0,\n        SplashRadius = 1.0,\n        Burst = 2,\n        MinRange = 3.0\n    },\n    [\"Path1Level5\"] = {\n        Price = 145000,\n        Range = 91.0,\n        Damage = 750,\n        Cooldown = -2.0,\n        SplashRadius = 2.0,\n        Burst = 2,\n        MinRange = 30.0\n    },\n    [\"Path2Level1\"] = {\n        Price = 400,\n        Range = 9.0,\n        Damage = 0,\n        Cooldown = 0\n    },\n    [\"Path2Level2\"] = {\n        Price = 1000,\n        Range = 10.0,\n        Damage = 0,\n        Cooldown = 0,\n        Stealth = true\n    },\n    [\"Path2Level3\"] = {\n        Price = 15000,\n        Range = -14.0,\n        Damage = -60,\n        Cooldown = -5.9,\n        Burst = -1,\n        SplashRadius = -1.0,\n        DamageType = \"Bullet\"\n    },\n    [\"Path2Level4\"] = {\n        Price = 20000,\n        Range = 3.0,\n        Damage = 50,\n        Cooldown = 0\n    },\n    [\"Path2Level5\"] = {\n        Price = 125000,\n        Range = 8.0,\n        Damage = 88,\n        Cooldown = -0.02\n    }\n}",
+    "hp": "85\ntop\n10\n10\n250\n250\n850\nbot\n10\n10\n820\n1000\n3000"
   },
   {
     "id": 23,
     "name": "Armored Factory",
     "category": "Gold",
-    "cost": "Lvl 35 \u2022 12,000 Gold (825 R$)",
-    "status": "Not Complete",
-    "code": ""
+    "cost": "Lvl 35 • 12,000 Gold (825 R$)",
+    "status": "Complete",
+    "code": "ArmoredFactory = {\n    [0] = {\n        Price = 700,\n        Units = {\n            \"Humvee0\"\n        },\n        SpawnCooldown = 70.0\n    },\n    [\"Path1Level1\"] = {\n        Price = 700,\n        Units = {\n            \"Humvee1\"\n        },\n        SpawnCooldown = 0\n    },\n    [\"Path1Level2\"] = {\n        Price = 1200,\n        Units = {\n            \"Humvee2\"\n        },\n        SpawnCooldown = 0\n    },\n    [\"Path1Level3\"] = {\n        Price = 3000,\n        Units = {\n            \"Humvee3\"\n        },\n        SpawnCooldown = 0\n    },\n    [\"Path1Level4\"] = {\n        Price = 8000,\n        Units = {\n            \"Humvee4\"\n        },\n        SpawnCooldown = -22.0\n    },\n    [\"Path1Level5\"] = {\n        Price = 38000,\n        Units = {\n            \"Humvee4\",\n            \"M2Bradley\"\n        },\n        SpawnCooldown = 0\n    },\n    [\"Path2Level1\"] = {\n        Price = 300,\n        Units = {\n            \"Humvee0\"\n        },\n        SpawnCooldown = -6.0\n    },\n    [\"Path2Level2\"] = {\n        Price = 400,\n        Units = {\n            \"Humvee0\"\n        },\n        SpawnCooldown = -7.0\n    },\n    [\"Path2Level3\"] = {\n        Price = 8500,\n        Units = {\n            \"Humvee0\",\n            \"MRAP\"\n        },\n        SpawnCooldown = 0\n    },\n    [\"Path2Level4\"] = {\n        Price = 27000,\n        Units = {\n            \"Humvee0\",\n            \"MRAP\",\n            \"M1Abrams\"\n        },\n        SpawnCooldown = 0\n    },\n    [\"Path2Level5\"] = {\n        Price = 54000,\n        Units = {\n            \"Humvee0\",\n            \"MRAP\",\n            \"M1XAbrams\"\n        },\n        SpawnCooldown = 0\n    }\n}\n\nHumvee0 = {\n    HP = 100,\n    Damage = 2.0,\n    Cooldown = 0.20,\n    Range = 20.0,\n    Speed = 5.0,\n    DamageType = \"Bullet\",\n    Attributes = \"Mechanical\",\n    Limit = 2\n}\n\nHumvee1 = {\n    HP = 195,\n    Damage = 4.0,\n    Cooldown = 0.20,\n    Range = 22.0,\n    Speed = 5.0,\n    DamageType = \"Bullet\",\n    Attributes = \"Mechanical\",\n    Limit = 2\n}\n\nHumvee2 = {\n    HP = 245,\n    Damage = 65.0,\n    Cooldown = 4.00,\n    Range = 42.0,\n    SplashRadius = 2.5,\n    Speed = 5.0,\n    DamageType = \"Explosive\",\n    Attributes = \"Mechanical\",\n    Limit = 2\n}\n\nHumvee3 = {\n    HP = 320,\n    Damage = 175.0,\n    Cooldown = 3.00,\n    Range = 48.0,\n    SplashRadius = 2.5,\n    Speed = 5.0,\n    DamageType = \"Explosive\",\n    Stealth = true,\n    IgnoreExplosionResistance = true,\n    Attributes = \"Mechanical\",\n    Limit = 2\n}\n\nHumvee4 = {\n    HP = 570,\n    Damage = 75.0,\n    Cooldown = 3.00,\n    Burst = 6,\n    BurstCooldown = 0.25,\n    Range = 37.0,\n    SplashRadius = 2.0,\n    Speed = 5.0,\n    DamageType = \"Explosive\",\n    Stealth = true,\n    Flying = true,\n    Attributes = \"Mechanical\",\n    Limit = 2\n}\n\nM2Bradley = {\n    HP = 1750,\n    Speed = 4.5,\n    Stealth = true,\n    Attributes = \"Mechanical\",\n    Limit = 2,\n    Autocannon = {\n        Damage = 100.0,\n        Cooldown = 0.25,\n        Range = 20.0,\n        SplashRadius = 1.25,\n        DamageType = \"Explosive\"\n    },\n    TOWMissile = {\n        Damage = 700.0,\n        Cooldown = 10.0,\n        Burst = 2,\n        BurstCooldown = 1.0,\n        Range = 40.0,\n        SplashRadius = 3.0,\n        IgnoreExplosionResistance = true,\n        DamageType = \"Explosive\"\n    }\n}\n\nMRAP = {\n    HP = 1000,\n    Damage = 15.0,\n    Cooldown = 0.25,\n    Range = 23.0,\n    SplashRadius = 1.0,\n    Speed = 4.0,\n    DamageType = \"Explosive\",\n    CollisionResistance = 10,\n    Attributes = \"Mechanical\",\n    Limit = 2\n}\n\nM1Abrams = {\n    HP = 3500,\n    Range = 38.0,\n    Speed = 4.0,\n    Stealth = true,\n    Attributes = \"Mechanical\",\n    Limit = 2,\n    UnmannedM2 = {\n        Damage = 10.0,\n        Cooldown = 0.25,\n        DamageType = \"Bullet\"\n    },\n    MannedM2 = {\n        Damage = 20.0,\n        Cooldown = 0.35,\n        DamageType = \"Bullet\"\n    },\n    CannonM256 = {\n        Damage = 700.0,\n        Cooldown = 3.20,\n        SplashRadius = 2.0,\n        DamageType = \"Explosive\"\n    }\n}\n\nM1XAbrams = {\n    HP = 6250,\n    Range = 38.0,\n    Speed = 3.5,\n    Stealth = true,\n    CollisionResistance = 25,\n    Attributes = \"Mechanical\",\n    Limit = 2,\n    FrontM2 = {\n        Damage = 18.0,\n        Cooldown = 0.21,\n        DamageType = \"Bullet\"\n    },\n    MannedM2 = {\n        Damage = 18.0,\n        Cooldown = 0.13,\n        DamageType = \"Bullet\"\n    },\n    RearM2 = {\n        Damage = 18.0,\n        Cooldown = 0.17,\n        DamageType = \"Bullet\"\n    },\n    CannonM256 = {\n        Damage = 1200.0,\n        Cooldown = 3.20,\n        SplashRadius = 2.0,\n        IgnoreExplosionResistance = true,\n        DamageType = \"Explosive\"\n    }\n}",
+    "hp": "800\ntop\n100\n100\n100\n400\n2500\nbot\n100\n100\n250\n2000\n3000"
   },
   {
     "id": 24,
     "name": "Juggernaut",
     "category": "Gold",
     "cost": "13,250 Gold",
-    "status": "Not Complete",
-    "code": ""
+    "status": "Complete",
+    "code": "Juggernaut = {\n    [0] = {\n        Price = 6350,\n        Range = 15,\n        Damage = 8,\n        Cooldown = 0.10,\n        DamageType = \"Bullet\"\n    },\n    [\"Path1Level1\"] = {\n        Price = 850,\n        Range = 1.0,\n        Damage = 0,\n        Cooldown = -0.01\n    },\n    [\"Path1Level2\"] = {\n        Price = 1600,\n        Range = 0,\n        Damage = 0,\n        Cooldown = -0.01\n    },\n    [\"Path1Level3\"] = {\n        Price = 6250,\n        Range = 2.0,\n        Damage = 5.0,\n        Cooldown = 0\n    },\n    [\"Path1Level4\"] = {\n        Price = 9000,\n        Range = 4.0,\n        Damage = 4.0,\n        Cooldown = 0.01,\n        IgnoreBulletResistance = true\n    },\n    [\"Path1Level5\"] = {\n        Price = 67000,\n        Range = 4.0,\n        Damage = 26.0,\n        Cooldown = 0,\n        Ability = {\n            Name = \"HE Rounds\",\n            Cooldown = 38.0,\n            Duration = 10.0,\n            Damage = 105.0,\n            Range = 40.0,\n            CooldownMod = 0.2,\n            SplashRadius = 3.0,\n            DamageType = \"Explosive\"\n        }\n    },\n    [\"Path2Level1\"] = {\n        Price = 600,\n        Range = 2.0,\n        Damage = 0,\n        Cooldown = 0\n    },\n    [\"Path2Level2\"] = {\n        Price = 3650,\n        Range = 0,\n        Damage = 3.0,\n        Cooldown = 0\n    },\n    [\"Path2Level3\"] = {\n        Price = 7500,\n        Range = 0,\n        Damage = 5.0,\n        Cooldown = 0,\n        Stealth = true\n    },\n    [\"Path2Level4\"] = {\n        Price = 14000,\n        Range = 0,\n        Damage = 12.0,\n        Cooldown = 0\n    },\n    [\"Path2Level5\"] = {\n        Price = 120000,\n        Range = 3.0,\n        Damage = 59.0,\n        Cooldown = 0,\n        AimTime = 1.20,\n        StunImmunity = true,\n        Ability = {\n            Name = \"Overcharge\",\n            Cooldown = 21.0,\n            Duration = 7.0,\n            DamageBuff = 100.0,\n            RangeBuff = 24.0,\n            Heal = 2000\n        }\n    }\n}",
+    "hp": "850\ntop\n75\n100\n275\n400\n2200\nbot\n40\n65\n750\n950\n3525"
   },
   {
     "id": 25,
     "name": "Medic",
     "category": "Gold",
     "cost": "14,000 Gold (600 R$)",
-    "status": "Not Complete",
-    "code": ""
+    "status": "Complete",
+    "code": "Medic = {\n    [0] = {\n        Price = 600,\n        Range = 12.0,\n        HealPerSecond = 50,\n        TowerType = \"Support\"\n    },\n    [\"Path1Level1\"] = {\n        Price = 400,\n        Range = 2.0,\n        HealPerSecond = 20\n    },\n    [\"Path1Level2\"] = {\n        Price = 825,\n        Range = 0,\n        HealPerSecond = 35\n    },\n    [\"Path1Level3\"] = {\n        Price = 3000,\n        Range = 2.0,\n        HealPerSecond = 75\n    },\n    [\"Path1Level4\"] = {\n        Price = 8000,\n        Range = 3.0,\n        HealPerSecond = 150,\n        Ability = {\n            Name = \"Uber LVL 1\",\n            Cooldown = 30.0,\n            Duration = 12.0,\n            Invulnerable = true,\n            FullHeal = true\n        }\n    },\n    [\"Path1Level5\"] = {\n        Price = 29000,\n        Range = 6.0,\n        HealPerSecond = 400,\n        StunImmunity = true,\n        Ability = {\n            Name = \"Uber LVL 2\",\n            Cooldown = 30.0,\n            Duration = 25.0,\n            Invulnerable = true,\n            FullHeal = true\n        }\n    },\n    [\"Path2Level1\"] = {\n        Price = 150,\n        Range = 2.0,\n        HealPerSecond = 0\n    },\n    [\"Path2Level2\"] = {\n        Price = 450,\n        Range = 3.0,\n        HealPerSecond = 0\n    },\n    [\"Path2Level3\"] = {\n        Price = 2800,\n        Range = 9.0,\n        HealPerSecond = 25\n    },\n    [\"Path2Level4\"] = {\n        Price = 9250,\n        Range = 2.0,\n        HealPerSecond = 125,\n        StunImmunity = true,\n        Ability = {\n            Name = \"Kritz LVL 1\",\n            Cooldown = 25.0,\n            Duration = 10.0,\n            DamageBuff = 0.75,\n            RangeBuff = 0.50\n        }\n    },\n    [\"Path2Level5\"] = {\n        Price = 28000,\n        Range = 0,\n        HealPerSecond = 200,\n        Ability = {\n            Name = \"Kritz LVL 2\",\n            Cooldown = 25.0,\n            Duration = 14.0,\n            DamageBuff = 2.00,\n            RangeBuff = 1.00\n        }\n    }\n}",
+    "hp": "350\ntop\n50\n70\n200\n475\n1400\nbot\n35\n50\n100\n300\n1200"
   },
   {
     "id": 26,
     "name": "Ghost",
     "category": "Gold",
-    "cost": "Lvl 60 \u2022 15,000 Gold (1,200 R$)",
+    "cost": "Lvl 60 • 15,000 Gold (1,200 R$)",
     "status": "Not Complete",
     "code": ""
   },
@@ -211,7 +218,7 @@
     "id": 27,
     "name": "Mobster",
     "category": "Gold",
-    "cost": "Lvl 50 \u2022 15,000 Gold (1,000 R$)",
+    "cost": "Lvl 50 • 15,000 Gold (1,000 R$)",
     "status": "Not Complete",
     "code": ""
   },
@@ -227,7 +234,7 @@
     "id": 29,
     "name": "Machine Gunner",
     "category": "Gold",
-    "cost": "Lvl 45 \u2022 18,000 Gold (550 R$)",
+    "cost": "Lvl 45 • 18,000 Gold (550 R$)",
     "status": "Not Complete",
     "code": ""
   },
@@ -235,7 +242,7 @@
     "id": 30,
     "name": "Slammer",
     "category": "Gold",
-    "cost": "Lvl 75 \u2022 22,000 Gold (1,900 R$)",
+    "cost": "Lvl 75 • 22,000 Gold (1,900 R$)",
     "status": "Not Complete",
     "code": ""
   },
@@ -243,7 +250,7 @@
     "id": 31,
     "name": "XWM Turret",
     "category": "Gold",
-    "cost": "Lvl 50 \u2022 32,000 Gold (2,500 R$)",
+    "cost": "Lvl 50 • 32,000 Gold (2,500 R$)",
     "status": "Not Complete",
     "code": ""
   },
@@ -251,7 +258,7 @@
     "id": 32,
     "name": "Golden Ranger",
     "category": "Gold",
-    "cost": "Lvl 50 \u2022 38,500 Gold (1,800 R$)",
+    "cost": "Lvl 50 • 38,500 Gold (1,800 R$)",
     "status": "Not Complete",
     "code": ""
   },
@@ -259,7 +266,7 @@
     "id": 33,
     "name": "Golden Mine Layer",
     "category": "Gold",
-    "cost": "Lvl 82 \u2022 69,000 Gold (2,900 R$)",
+    "cost": "Lvl 82 • 69,000 Gold (2,900 R$)",
     "status": "Not Complete",
     "code": ""
   },
@@ -267,7 +274,7 @@
     "id": 34,
     "name": "Combat Drone",
     "category": "Gold",
-    "cost": "Lvl 100 \u2022 72,000 Gold (2,700 R$)",
+    "cost": "Lvl 100 • 72,000 Gold (2,700 R$)",
     "status": "Not Complete",
     "code": ""
   },
@@ -275,7 +282,7 @@
     "id": 35,
     "name": "Warship",
     "category": "Gold",
-    "cost": "Lvl 100 \u2022 75,000 Gold (4,950 R$)",
+    "cost": "Lvl 100 • 75,000 Gold (4,950 R$)",
     "status": "Not Complete",
     "code": ""
   },
@@ -283,7 +290,7 @@
     "id": 36,
     "name": "Helicopter",
     "category": "Gold",
-    "cost": "Lvl 85 \u2022 82,000 Gold (4,200 R$)",
+    "cost": "Lvl 85 • 82,000 Gold (4,200 R$)",
     "status": "Not Complete",
     "code": ""
   },
@@ -291,7 +298,7 @@
     "id": 37,
     "name": "Golden Juggernaut",
     "category": "Gold",
-    "cost": "Lvl 75 \u2022 85,000 Gold (3,400 R$)",
+    "cost": "Lvl 75 • 85,000 Gold (3,400 R$)",
     "status": "Not Complete",
     "code": ""
   },
@@ -299,7 +306,7 @@
     "id": 38,
     "name": "Golden Mobster",
     "category": "Gold",
-    "cost": "Lvl 110 \u2022 90,000 Gold (3,850 R$)",
+    "cost": "Lvl 110 • 90,000 Gold (3,850 R$)",
     "status": "Not Complete",
     "code": ""
   },
@@ -307,7 +314,7 @@
     "id": 39,
     "name": "Shield Tower",
     "category": "Crystal",
-    "cost": "Lvl 35 \u2022 2,875 Crystals (1,200 R$)",
+    "cost": "Lvl 35 • 2,875 Crystals (1,200 R$)",
     "status": "Not Complete",
     "code": ""
   },
@@ -315,7 +322,7 @@
     "id": 40,
     "name": "Oil Derrick",
     "category": "Crystal",
-    "cost": "Lvl 35 \u2022 6,250 Crystals (1,500 R$)",
+    "cost": "Lvl 35 • 6,250 Crystals (1,500 R$)",
     "status": "In Progress",
     "code": "OilDerrick = {\n    [0] = {\n        Price = 575,\n        TimeCash = 45,\n        Time = 6,\n        HP = 800\n    },\n    [\"Path1Level1\"] = {\n        Price = 400,\n        TimeCash = 20,                  -- 45 -> 65 (+20)\n        HP = 150                        -- 800 -> 950 (+150)\n    },\n    [\"Path1Level2\"] = {\n        Price = 1500,\n        TimeCash = 70,                  -- 65 -> 135 (+70)\n        HP = 200                        -- 950 -> 1150 (+200)\n    },\n    [\"Path1Level3\"] = {\n        Price = 6500,\n        TimeCash = 160,                 -- 135 -> 295 (+160)\n        HP = 700                        -- 1150 -> 1850 (+700)\n    },\n    [\"Path1Level4\"] = {\n        Price = 13000,\n        TimeCash = 150,                 -- 295 -> 445 (+150)\n        Time = -1,                      -- 6s -> 5s (-1s)\n        HP = 1800                       -- 1850 -> 3650 (+1800)\n    },\n    [\"Path1Level5\"] = {\n        Price = 40000,\n        TimeCash = 160,                 -- 445 -> 605 (+160)\n        Time = -1,                      -- 5s -> 4s (-1s)\n        HP = 4000                       -- 3650 -> 7650 (+4000)\n    },\n    [\"Path2Level1\"] = {\n        Price = 1550,\n        Cash = 200,                     -- introduces per-wave cash: +200\n        HP = 150                        -- 800 -> 950 (+150)\n    },\n    [\"Path2Level2\"] = {\n        Price = 5250,\n        Cash = 600,                     -- 200 -> 800 (+600)\n        HP = 250                        -- 950 -> 1200 (+250)\n    },\n    [\"Path2Level3\"] = {\n        Price = 12000,\n        Cash = 1000,                    -- 800 -> 1800 (+1000)\n        TimeCash = 130,                 -- 45 -> 175 (+130)\n        CashPerDamage = 0.03,\n        HP = 1000                       -- 1200 -> 2200 (+1000)\n    },\n    [\"Path2Level4\"] = {\n        Price = 38100,\n        Cash = 2800,                    -- 1800 -> 4600 (+2800)\n        TimeCash = 75,                  -- 175 -> 250 (+75)\n        CashPerDamage = 0.05,           -- 0.03 -> 0.08 (+0.05)\n        HP = 1800                       -- 2200 -> 4000 (+1800)\n    },\n    [\"Path2Level5\"] = {\n        Price = 75000,\n        Cash = 5000,                    -- 4600 -> 9600 (+5000)\n        TimeCash = 50,                  -- 250 -> 300 (+50)\n        CashPerDamage = 0.10,           -- 0.08 -> 0.18 (+0.10)\n        HP = 6000                       -- 4000 -> 10000 (+6000)\n    }\n}"
   },
@@ -323,7 +330,7 @@
     "id": 41,
     "name": "Behemoth Factory",
     "category": "Crystal",
-    "cost": "Lvl 35 \u2022 8,450 Crystals (3,450 R$)",
+    "cost": "Lvl 35 • 8,450 Crystals (3,450 R$)",
     "status": "Not Complete",
     "code": ""
   },
@@ -339,7 +346,7 @@
     "id": 43,
     "name": "Combat Medic",
     "category": "Crystal",
-    "cost": "Lvl 60 \u2022 13,275 Crystals (1,400 R$)",
+    "cost": "Lvl 60 • 13,275 Crystals (1,400 R$)",
     "status": "Not Complete",
     "code": ""
   },
@@ -347,7 +354,7 @@
     "id": 44,
     "name": "War Machine Factory",
     "category": "Crystal",
-    "cost": "Lvl 35 \u2022 13,550 Crystals (5,500 R$)",
+    "cost": "Lvl 35 • 13,550 Crystals (5,500 R$)",
     "status": "Not Complete",
     "code": ""
   },
@@ -355,7 +362,7 @@
     "id": 45,
     "name": "Refractor",
     "category": "Crystal",
-    "cost": "Lvl 35 \u2022 14,500 Crystals (5,850 R$)",
+    "cost": "Lvl 35 • 14,500 Crystals (5,850 R$)",
     "status": "Not Complete",
     "code": ""
   },
@@ -467,7 +474,7 @@
     "id": 59,
     "name": "Golden Warship",
     "category": "Event",
-    "cost": "Lvl 200 \u2022 1,676,767 Gold",
+    "cost": "Lvl 200 • 1,676,767 Gold",
     "status": "Not Complete",
     "code": ""
   },
